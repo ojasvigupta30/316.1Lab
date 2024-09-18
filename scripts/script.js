@@ -39,3 +39,41 @@ topMenuEl.classList.add(`flex-around`);
 
 console.log(topMenuEl);
 
+
+
+//Part 3: Adding Menu Buttons
+
+// Iterate over the entire menuLinks array and for each "link" object:
+// Create an <a> element.
+// On the new element, add an href attribute with its value set to the href property of the "link" object.
+// Set the new element's content to the value of the text property of the "link" object.
+// Append the new element to the topMenuEl element.
+
+// Menu data structure
+var menuLinks = [
+    { text: 'about', href: '/about' },
+    { text: 'catalog', href: '/catalog' },
+    { text: 'orders', href: '/orders' },
+    { text: 'account', href: '/account' },
+];
+
+
+
+for (let i = 0; i < menuLinks.length; i++) {
+
+
+    let navItems = document.createElement(`a`);
+
+
+    navItems.textContent = menuLinks[i].text;
+    
+
+    navItems.setAttribute(`href`, menuLinks[i].href);
+
+    console.log(navItems);
+
+    topMenuEl.appendChild(navItems);
+
+
+
+}
